@@ -1,46 +1,48 @@
-# Thesis Tracker
+# Student Tracker
 
-## Beschreibung
-Das Thesis-Tracker-Projekt ist eine innovative Lösung, die darauf abzielt, diesen Herausforderungen zu begegnen. Durch die Entwicklung der webbasierten Plattform wird Thesis-Tracker den Prozess der Verwaltung von Abschlussarbeiten vereinfachen und optimieren. Das System wird es den Bildungseinrichtungen ermöglichen, alle relevanten Informationen zu den Abschlussarbeiten ihrer Studierenden zentralisiert zu speichern und zu verwalten. Ein zentrales Merkmal des Thesis-Trackers ist die Möglichkeit, Abschlussarbeiten einzelnen Studierenden zuzuweisen. Dies ermöglicht es den Verantwortlichen, den Fortschritt jeder Abschlussarbeit genau zu verfolgen und sicherzustellen, dass die Studierenden die notwendige Unterstützung erhalten, um ihre Arbeiten erfolgreich abzuschließen. Darüber hinaus wird Thesis-Tracker eine Reihe von Funktionen bieten, die es den Benutzern erleichtern, relevante Informationen zu suchen, zu filtern und anzuzeigen. Dies umfasst die Möglichkeit, Abschlussarbeiten nach verschiedenen Kriterien zu sortieren. 
+This project is a **Next.js** React application that visualizes student data, including gender distribution, across various semesters. The app provides various charts (e.g., Pie charts, Line charts, and Scatter charts) to display data in an insightful and interactive way.
 
-Insgesamt wird Thesis-Tracker dazu beitragen, den Verwaltungsaufwand im Zusammenhang mit Abschlussarbeiten zu reduzieren und gleichzeitig eine transparente und effiziente Kommunikation zwischen Studierenden, Betreuern und anderen relevanten Parteien zu ermöglichen. Durch die Implementierung dieses Systems werden Bildungseinrichtungen in der Lage sein, Ressourcen effektiver zu nutzen und den Erfolg ihrer Studierenden zu fördern.
- 
 
-## Installation und Laufen  
 
-1. **Repository klonen**: Führe den folgenden Befehl aus, um das Git-Repository zu klonen:
+## Tech Stack
+
+- **Next.js** - React framework for building static and dynamic websites.
+- **React** - JavaScript library for building user interfaces.
+- **MUI Charts** - A set of components to integrate charts in React apps.
+- **Prisma** - For database management and querying.
+
+## Installation
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- **Node.js** (v14 or above)
+- **npm** or **yarn**
+
+### Step-by-step Installation
+
+1. **Clone the repository**
+
+   Clone this repository to your local machine using Git:
+
    ```bash
-   git clone https://gitlab-fi.ostfalia.de/id318392/issue-tracker.git
-2. **Zum Projektverzeichnis wechseln**: Navigiere in das Verzeichnis des geklonten Repositories mit dem Befehl:
-    ```bash
-   cd issue-tracker
-3. **Prisma Migration durchführen**: 
-Führe die Prisma-Migration aus, um die Datenbank zu migrieren. Benenne die Migration, z.B. als "initial_migration":
-    ```bash npx prisma migrate dev --name initial_migration
-    npx prisma migrate dev --name initial_migration
-4. **Projekt bauen**: Baue das Projekt mit dem Befehl:
-    ```bash 
-    npm run build
-5. **Anwendung starten**: Starte die Anwendung mit dem Befehl:
-    ```bash
-    npm start
-6. **Zugriff auf die Anwendung**: Die Anwendung ist nun unter der Adresse Du kannst die Anwendung [http://localhost:3000/](http://localhost:3000/) aufrufen.
- zugreifbar.
+   git clone https://github.com/yourusername/student-gender-distribution.git
 
 
-## Autoren
-- Donald Marion, Tchokote Ngayap(m.tchokote@ostfalia.de)
-- Nyanga Bildad (n.bildad@ostfalia.de)
-    
 
-## Weitere Informationen
-Um mehr über Next.js zu erfahren, schau dir die folgenden Ressourcen an:
 
-[Next.js Dokumentation](https://nextjs.org/docs) - lerne mehr über die Funktionen und API von Next.js.  
-[Next.js lernen](https://nextjs.org/learn) - ein interaktives Next.js Tutorial.
-Du kannst auch [das Next.js GitHub Repository](https://github.com/vercel/next.js/) besuchen - dein Feedback und deine Beiträge sind willkommen!
+## Running in Development Mode
 
-Bereitstellung auf Vercel
-Der einfachste Weg, deine Next.js-App bereitzustellen, ist die Verwendung der [Vercel Plattform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) von den Machern von Next.js.
+When you want to run the application locally for development, follow these steps:
 
-Schau dir unsere [Next.js Deployment-Dokumentation](https://nextjs.org/docs/deployment) für weitere Details an.
+### Start the Development Server:
+
+In development mode, Next.js will automatically reload changes when you save files.
+
+- If you're using **npm**:
+
+  ```bash
+  npm run dev
+
+This will start your application at http://localhost:3000 by default. The development server enables hot reloading, so any changes you make to the code will automatically reflect in the browser without needing a manual refresh.
