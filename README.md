@@ -27,7 +27,7 @@ Ensure you have the following installed:
    Clone this repository to your local machine using Git:
 
    ```bash
-   git clone https://github.com/yourusername/student-gender-distribution.git
+   git clone https://github.com/Bildad123/internationalisation_mui_nextjs.git
 
 
 
