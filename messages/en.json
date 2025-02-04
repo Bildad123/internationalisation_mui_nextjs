@@ -1,0 +1,132 @@
+{
+  "translations": {
+    "LocaleSwitcher": {
+      "label": "Change Language",
+      "locale": "{locale, select, de {🇩🇪 German} en {🇺🇸 English} other {Unknown}}"
+    },
+    "components": {
+      "navBar": {
+        "links": {
+          "dashboard": "Dashboard",
+          "students": "Students"
+        },
+        "action": "Sign In",
+        "logout": "Sign Out"
+      },
+      "pagination": {
+        "page": "Page",
+        "of": "of"
+      }
+    },
+    "register": {
+      "form": {
+        "firstname": "First Name",
+        "lastname": "Last Name",
+        "email": "Email",
+        "password": "Password",
+        "formTitle": "Create Account",
+        "formSubtitle": "Sign up for free! Please provide your details",
+        "linkToSignInLabel": "Already have an account?",
+        "loginPage": "Sign In",
+        "action": "Register",
+        "unexpectedError": "An error occurred. The email may already be in use."
+      },
+      "validationSchema": {
+        "firstnameValidationMessage": "First name must be at least 1 character long",
+        "lastnameValidationMessage": "Last name must be at least 1 character long",
+        "emailValidationMessage": "Email is not valid",
+        "passwordValidationMessage": "Password must be at least 1 character long"
+      }
+    },
+    "signIn": {
+      "form": {
+        "email": "Email",
+        "password": "Password",
+        "formTitle": "Sign In Page",
+        "formSubtitle": "Welcome back! Please enter your details",
+        "linkToRegisterLabel": "Don't have an account?",
+        "registerPage": "Register",
+        "action": "Sign In",
+        "unexpectedError": "Invalid email and password combination."
+      },
+      "validationSchema": {
+        "emailValidationMessage": "Email is invalid",
+        "passwordValidationMessage": "Password must be at least 1 character long"
+      }
+    },
+    "signOut": {
+      "action": "Sign Out",
+      "confirmation": "Are you sure you want to sign out?"
+    },
+    "students": {
+      "validationSchema": {
+        "firstnameValidationMessage": {
+          "min": "First name is required",
+          "max": "First name must not exceed 50 characters"
+        },
+        "lastnameValidationMessage": {
+          "min": "Last name is required",
+          "max": "Last name must not exceed 50 characters"
+        },
+        "matriculationValidationMessage": {
+          "min": "Matriculation number must be at least 8 characters long",
+          "max": "Matriculation number must not exceed 10 characters",
+          "refine": "Matriculation number must only contain digits"
+        },
+        "emailValidationMessage": "Email is invalid"
+      },
+      "components": {
+        "studentsForm": {
+          "firstname": "First Name",
+          "lastname": "Last Name",
+          "matriculation": "Matriculation Number",
+          "email": "Email",
+          "update": "Edit Student",
+          "create": "Create Student"
+        }
+      },
+      "id": {
+        "deleteStudentButton": {
+          "delete": "Delete Student",
+          "confirmation": "Confirm Deletion",
+          "deleteWarning": "Are you sure you want to delete this student? This action cannot be undone.",
+          "cancel": "Cancel",
+          "cannotDeleteDialogTitle": "Error",
+          "cannotDelete": "This student could not be deleted.",
+          "ok": "Ok"
+        },
+        "editStudentButton": {
+          "edit": "Edit Student"
+        },
+        "studentDetails": {
+          "firstname": "First Name",
+          "lastname": "Last Name",
+          "email": "Email",
+          "matriculation": "Matriculation Number",
+          "createdAt": "Created At",
+          "updatedAt": "Updated At"
+        }
+      },
+      "list": {
+        "loading": {
+          "name": "Name",
+          "matriculation": "Matriculation Number",
+          "createdAt": "Created At"
+        },
+        "studentActions": {
+          "filter": "Filter",
+          "resetFilter": "Reset Filter",
+          "newStudent": "New Student"
+        },
+        "studentSearchFilter": {
+          "placeholder": "Search by name..."
+        },
+        "studentTable": {
+          "firstname": "First Name",
+          "lastname": "Last Name",
+          "email": "Email"
+        }
+      }
+    }
+  }
+}

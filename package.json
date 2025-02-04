@@ -1,0 +1,49 @@
+{
+  "name": "issue-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@hookform/resolvers": "^3.3.4",
+    "@mui/icons-material": "^6.4.2",
+    "@mui/material": "^6.4.2",
+    "@next-auth/prisma-adapter": "^1.0.7",
+    "@prisma/client": "^5.3.1",
+    "@tanstack/react-query": "^4.35.3",
+    "@types/node": "20.11.16",
+    "@types/react": "18.2.52",
+    "@types/react-dom": "18.2.18",
+    "autoprefixer": "10.4.17",
+    "axios": "^1.6.7",
+    "bcrypt": "^5.1.1",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.1.0",
+    "framer-motion": "^11.0.14",
+    "next": "14.1.0",
+    "next-auth": "^4.24.5",
+    "next-intl": "^3.10.0",
+    "prisma": "^5.3.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.50.1",
+    "typescript": "5.3.3",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "typescript": "^5"
+  }
+}

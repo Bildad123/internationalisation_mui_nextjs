@@ -1,0 +1,134 @@
+{
+  "translations": {
+    "LocaleSwitcher": {
+      "label": "Sprache ändern",
+      "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unbekannt}}"
+    },
+    "components": {
+      "navBar": {
+        "links": {
+          "dashboard": "Dashboard",
+          "students": "Studierende"
+        },
+        "action": "Anmelden",
+        "logout": "Abmelden"
+      },
+      "pagination": {
+        "page": "Seite",
+        "of": "von"
+      }
+    },
+
+    "register": {
+      "form": {
+        "firstname": "Vorname",
+        "lastname": "Nachname",
+        "email": "Email",
+        "password": "Passwort",
+        "formTitle": "Konto erstellen",
+        "formSubtitle": "Kostenlos registrieren! Bitte geben Sie Ihre Daten ein",
+        "linkToSignInLabel": "Haben Sie bereits ein Konto?",
+        "loginPage": "Anmelden",
+        "action": "Registrieren",
+        "unexpectedError": "Ein Fehler ist aufgetreten. Die E-Mail ist möglicherweise bereits vergeben."
+      },
+      "validationSchema": {
+        "firstnameValidationMessage": "Vorname muss mindestens 1 Zeichen lang sein",
+        "lastnameValidationMessage": "Nachname muss mindestens 1 Zeichen lang sein",
+        "emailValidationMessage": "E-Mail ist nicht gültig",
+        "passwordValidationMessage": "Passwort muss mindestens 1 Zeichen lang sein"
+      }
+    },
+    "signIn": {
+      "form": {
+        "email": "Email",
+        "password": "Passwort",
+        "formTitle": "Anmeldeseite",
+        "formSubtitle": "Willkommen zurück! Bitte geben Sie Ihre Daten ein",
+        "linkToRegisterLabel": "Noch kein Konto?",
+        "registerPage": "Registrieren",
+        "action": "Anmelden",
+        "unexpectedError": "Ungültige E-Mail- und Passwortkombination."
+      },
+
+      "validationSchema": {
+        "emailValidationMessage": "E-Mail ist ungültig",
+        "passwordValidationMessage": "Passwort muss mindestens 1 Zeichen lang sein"
+      }
+    },
+    "signOut": {
+      "action": "Abmelden",
+      "confirmation": "Möchten Sie sich wirklich abmelden"
+    },
+    "students": {
+      "validationSchema": {
+        "firstnameValidationMessage": {
+          "min": "Vorname ist erforderlich",
+          "max": "Vorname darf maximal 50 Zeichen lang sein"
+        },
+        "lastnameValidationMessage": {
+          "min": "Nachname ist erforderlich",
+          "max": "Nachname darf maximal 50 Zeichen lang sein"
+        },
+        "matriculationValidationMessage": {
+          "min": "Matrikelnummer muss mindestens 8 Zeichen lang sein",
+          "max": "Matrikelnummer darf maximal 10 Zeichen lang sein",
+          "refine": "Matrikelnummer darf nur Ziffern enthalten"
+        },
+        "emailValidationMessage": "E-Mail ist ungültig"
+      },
+      "components": {
+        "studentsForm": {
+          "firstname": "Vorname",
+          "lastname": "Nachname",
+          "matriculation": "Matrikelnummer",
+          "email": "Email",
+          "update": "Student bearbeiten",
+          "create": "Student erstellen"
+        }
+      },
+      "id": {
+        "deleteStudentButton": {
+          "delete": "Student löschen",
+          "confirmation": "Löschung bestätigen",
+          "deleteWarning": "Sind Sie sicher, dass Sie diesen Studenten löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+          "cancel": "Abbrechen",
+          "cannotDeleteDialogTitle": "Fehler",
+          "cannotDelete": "Dieser Student konnte nicht gelöscht werden.",
+          "ok": "Ok"
+        },
+        "editStudentButton": {
+          "edit": "Student bearbeiten"
+        },
+        "studentDetails": {
+          "firstname": "Vorname",
+          "lastname": "Nachname",
+          "email": "Email",
+          "matriculation": "Matrikelnummer",
+          "createdAt": "Erstellt am",
+          "updatedAt": "Aktualisiert am"
+        }
+      },
+      "list": {
+        "loading": {
+          "name": "Name",
+          "matriculation": "Matrikelnummer",
+          "createdAt": "Erstellt am"
+        },
+        "studentActions": {
+          "filter": "Filter",
+          "resetFilter": "Filter zurücksetzen",
+          "newStudent": "Neuer Student"
+        },
+        "studentSearchFilter": {
+          "placeholder": "Nach Namen suchen..."
+        },
+        "studentTable": {
+          "firstname": "Vorname",
+          "lastname": "Nachname",
+          "email": "Email"
+        }
+      }
+    }
+  }
+}
