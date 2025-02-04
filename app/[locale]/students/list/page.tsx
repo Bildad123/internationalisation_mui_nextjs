@@ -68,23 +68,10 @@ const StudentsPage = async ({ searchParams }: Props) => {
     ],
   };
 
-  const orderBy = columnNames.includes(searchParams.orderBy)
-    ? { [searchParams.orderBy]: searchParams.dir }
-    : undefined;
-
-  const page = parseInt(searchParams.page) || 1;
-  const pSize = parseInt(searchParams.pageSize) || 10;
-
   const students = await prisma.student.findMany({
     where,
-    orderBy,
-    skip: (page - 1) * pSize,
-    take: pSize,
   });
 
-  const studentCount = await prisma.student.count({
-    where,
-  });
   return (
     <Box flexDirection="column" gap="3">
       <StudentActions
@@ -93,10 +80,7 @@ const StudentsPage = async ({ searchParams }: Props) => {
       />
 
       <Box>
-        <StudentTable
-          searchParams={searchParams}
-          students={students}
-        />
+        <StudentTable searchParams={searchParams} students={students} />
       </Box>
     </Box>
   );
