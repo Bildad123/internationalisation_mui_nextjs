@@ -80,6 +80,8 @@
           "firstname": "First Name",
           "lastname": "Last Name",
           "matriculation": "Matriculation Number",
+          "gender" : "Gender",
+          "semester": "Semester",
           "email": "Email",
           "update": "Edit Student",
           "create": "Create Student"
@@ -124,7 +126,9 @@
         "studentTable": {
           "firstname": "First Name",
           "lastname": "Last Name",
-          "email": "Email"
+          "email": "Email",
+          "gender": "Gender",
+          "semester":"Semester"
         }
       }
     }

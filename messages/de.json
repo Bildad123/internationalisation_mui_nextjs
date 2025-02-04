@@ -82,6 +82,8 @@
           "firstname": "Vorname",
           "lastname": "Nachname",
           "matriculation": "Matrikelnummer",
+          "gender": "Geschlecht",
+          "semester": "Semester",
           "email": "Email",
           "update": "Student bearbeiten",
           "create": "Student erstellen"
@@ -126,7 +128,9 @@
         "studentTable": {
           "firstname": "Vorname",
           "lastname": "Nachname",
-          "email": "Email"
+          "email": "Email",
+          "semester": "Semester",
+          "gender": "Geschlecht"
         }
       }
     }

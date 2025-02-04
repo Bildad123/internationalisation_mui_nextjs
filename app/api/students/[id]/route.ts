@@ -1,7 +1,6 @@
 import { studentSchema } from "@/app/[locale]/ValidationSchemas";
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/prisma/client";
-import { error } from "console";
 
 export async function PATCH(
   request: NextRequest,
@@ -27,6 +26,8 @@ export async function PATCH(
       lastName: body.lastName,
       matrikel: body.matrikel,
       email: body.email,
+      semester: body.semester,
+      gender: body.gender,
     },
   });
 

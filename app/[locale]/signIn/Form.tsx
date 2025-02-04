@@ -12,6 +12,7 @@ import {
   TextField,
   Typography,
   Link,
+  CircularProgress,
 } from "@mui/material";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
@@ -21,7 +22,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FieldValues, useForm } from "react-hook-form";
 import { z } from "zod";
-import { Spinner } from "../components";
+
 import ErrorDialog from "../components/ErrorDialog";
 
 interface Translations {
@@ -73,10 +74,10 @@ const Form = ({ translations }: { translations: Translations }) => {
       email: data.email,
       password: data.password,
       redirect: false,
-      callbackUrl: "/dashbord",
+      callbackUrl: "/dashboard",
     });
     if (response?.ok) {
-      router.push("/dashbord");
+      router.push("/dashboard");
       router.refresh();
     } else {
       setLoading(false);
@@ -172,7 +173,7 @@ const Form = ({ translations }: { translations: Translations }) => {
               sx={{ py: 1, mt: 2 }}
               disabled={isLoading}
             >
-              {isLoading ? <Spinner /> : action}
+              {isLoading ? <CircularProgress /> : action}
             </Button>
 
             <Divider sx={{ my: 2 }} />
@@ -185,11 +186,7 @@ const Form = ({ translations }: { translations: Translations }) => {
               }}
             >
               <Typography>{linkToRegisterLabel}</Typography>
-              <Link
-                href="/register"
-                component={NextLink}
-                sx={{ml: 1 }}
-              >
+              <Link href="/register" component={NextLink} sx={{ ml: 1 }}>
                 {registerPage}
               </Link>
             </Box>

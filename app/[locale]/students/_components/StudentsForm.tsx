@@ -11,6 +11,10 @@ import {
   Container,
   Paper,
   Box,
+  MenuItem,
+  Select,
+  InputLabel,
+  FormControl,
 } from "@mui/material";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -24,6 +28,8 @@ interface Translations {
   lastname: string;
   matriculation: string;
   email: string;
+  semester: string;
+  gender: string;
   update: string;
   create: string;
 
@@ -81,6 +87,16 @@ const StudentsForm = ({ student, translations }: Props) => {
           message: emailValidationMessage,
         }
       ),
+    semester: z
+      .string()
+      .min(1, "Semester is required")
+      .transform((val) => parseInt(val, 10)) // Transform string to integer
+      .refine((val) => !isNaN(val), {
+        message: "Semester must be a valid number",
+      }), // Validate it's a number
+    gender: z.enum(["Male", "Female"], {
+      required_error: "Gender is required",
+    }),
   });
 
   type StudentsFormData = z.infer<typeof studentSchema>;
@@ -95,8 +111,18 @@ const StudentsForm = ({ student, translations }: Props) => {
 
   const [error, setError] = useState("");
   const [isSubmitting, setSubmitting] = useState(false);
-  const { firstname, lastname, matriculation, email, update, create } =
-    translations;
+  const {
+    firstname,
+    lastname,
+    matriculation,
+    email,
+    semester,
+    gender,
+    update,
+    create,
+  } = translations;
+
+  console.log("semester : " + semester);
 
   return (
     <Container
@@ -134,7 +160,6 @@ const StudentsForm = ({ student, translations }: Props) => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-
             minHeight: "50vh",
             width: "100%",
           }}
@@ -148,6 +173,7 @@ const StudentsForm = ({ student, translations }: Props) => {
             {/* First Name */}
             <TextField
               fullWidth
+              label={firstname}
               defaultValue={student?.firstName}
               placeholder={firstname}
               {...register("firstName")}
@@ -157,11 +183,12 @@ const StudentsForm = ({ student, translations }: Props) => {
               size="small"
             />
 
-            <Divider sx={{ my: 1 }} />
+            <Divider sx={{ my: 0.5 }} />
 
             {/* Last Name */}
             <TextField
               fullWidth
+              label={lastname}
               defaultValue={student?.lastName}
               placeholder={lastname}
               {...register("lastName")}
@@ -171,11 +198,12 @@ const StudentsForm = ({ student, translations }: Props) => {
               size="small"
             />
 
-            <Divider sx={{ my: 1 }} />
+            <Divider sx={{ my: 0.5 }} />
 
             {/* Matriculation */}
             <TextField
               fullWidth
+              label={matriculation}
               defaultValue={student?.matrikel}
               placeholder={matriculation}
               {...register("matrikel")}
@@ -185,13 +213,12 @@ const StudentsForm = ({ student, translations }: Props) => {
               size="small"
             />
 
-            <Divider sx={{ my: 1 }} />
+            <Divider sx={{ my: 0.5 }} />
 
             {/* Email */}
-
             <TextField
               fullWidth
-              variant="outlined"
+              label={email}
               defaultValue={student?.email ?? ""}
               placeholder={email}
               {...register("email")}
@@ -201,7 +228,47 @@ const StudentsForm = ({ student, translations }: Props) => {
               size="small"
             />
 
-            <Divider sx={{ my: 1 }} />
+            <Divider sx={{ my: 0.5 }} />
+
+            {/* Semester */}
+            <TextField
+              fullWidth
+              label={semester}
+              placeholder={semester}
+              defaultValue={student?.semester ?? ""}
+              {...register("semester")}
+              error={!!errors.semester}
+              helperText={errors.semester?.message}
+              margin="normal"
+              size="small"
+            />
+
+            <Divider sx={{ my: 0.5 }} />
+
+            {/* Gender */}
+            <FormControl
+              fullWidth
+              margin="normal"
+              size="small"
+              error={!!errors.gender}
+            >
+              <InputLabel>{gender}</InputLabel>
+              <Select
+                label={gender}
+                defaultValue={student?.gender ?? ""}
+                {...register("gender")}
+              >
+                <MenuItem value="Male">Male</MenuItem>
+                <MenuItem value="Female">Female</MenuItem>
+              </Select>
+              {errors.gender && (
+                <Typography variant="caption" color="error">
+                  {errors.gender.message}
+                </Typography>
+              )}
+            </FormControl>
+
+            <Divider sx={{ my: 0.5 }} />
 
             {/* Submit Button */}
             <Button

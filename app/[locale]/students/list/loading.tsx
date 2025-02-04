@@ -15,42 +15,60 @@ const LoadingStudentPage = () => {
   const student = [1, 2, 3, 4, 5];
   return (
     <Box sx={{ padding: 3 }}>
-      <TableContainer component={Paper}>
-        <Table sx={{ marginY: 3 }}>
-          <TableHead>
-            <TableRow>
-              <TableCell>
-                <Skeleton width={"10rem"} />
-              </TableCell>
-              <TableCell>
-                <Skeleton width={"10rem"} />
-              </TableCell>
-              <TableCell>
-                <Skeleton width="10rem" />
-              </TableCell>
-            </TableRow>
-          </TableHead>
+      <Skeleton>
+        <TableContainer component={Paper}>
+          <Table sx={{ marginY: 3 }}>
+            <TableHead>
+              <TableRow>
+                <TableCell>
+                  <Skeleton width={"10rem"} />
+                </TableCell>
+                <TableCell>
+                  <Skeleton width={"10rem"} />
+                </TableCell>
+                <TableCell>
+                  <Skeleton width="10rem" />
+                </TableCell>
 
-          <TableBody>
-            {student.map((studentItem, index) => (
-              <TableRow key={index}>
                 <TableCell>
-                  <Skeleton variant="text" width="10rem" />
-                  <Box>
-                    <Skeleton variant="text" width="5rem" />
-                  </Box>
+                  <Skeleton width="10rem" />
                 </TableCell>
+
                 <TableCell>
-                  <Skeleton variant="text" width="8rem" />
-                </TableCell>
-                <TableCell>
-                  <Skeleton variant="text" width="8rem" />
+                  <Skeleton width="10rem" />
                 </TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableHead>
+
+            <TableBody>
+              {student.map((studentItem, index) => (
+                <TableRow key={index}>
+                  <TableCell>
+                    <Skeleton variant="text" width="10rem" />
+                    <Box>
+                      <Skeleton variant="text" width="5rem" />
+                    </Box>
+                  </TableCell>
+                  <TableCell>
+                    <Skeleton variant="text" width="8rem" />
+                  </TableCell>
+                  <TableCell>
+                    <Skeleton variant="text" width="8rem" />
+                  </TableCell>
+
+                  <TableCell>
+                    <Skeleton variant="text" width="8rem" />
+                  </TableCell>
+
+                  <TableCell>
+                    <Skeleton variant="text" width="8rem" />
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Skeleton>
     </Box>
   );
 };

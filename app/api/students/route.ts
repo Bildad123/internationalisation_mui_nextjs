@@ -22,6 +22,8 @@ export async function POST(request: NextRequest) {
       lastName: body.lastName,
       matrikel: body.matrikel,
       email: body.email,
+      semester: body.semester,
+      gender:body.gender
     },
   });
 

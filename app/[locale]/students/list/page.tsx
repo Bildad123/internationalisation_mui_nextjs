@@ -93,7 +93,10 @@ const StudentsPage = async ({ searchParams }: Props) => {
       />
 
       <Box>
-        <StudentTable searchParams={searchParams} students={students} />
+        <StudentTable
+          searchParams={searchParams}
+          students={students}
+        />
       </Box>
     </Box>
   );

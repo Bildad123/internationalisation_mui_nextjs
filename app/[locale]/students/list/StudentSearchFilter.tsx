@@ -36,10 +36,6 @@ const StudentSearchFilter = ({
     if (filterText) {
       params.append("name", filterText);
     }
-    if (searchParams.get("pageSize")) {
-      params.append("pageSize", searchParams.get("pageSize")!);
-    }
-
     // Append query to the router URL
     const query = params.size ? "?" + params.toString() : "";
     router.push("/students/list" + query);

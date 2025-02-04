@@ -101,14 +101,14 @@ const MuiStudentDetails = ({
           <Stack gap={2}>
             <Chip
               label={`${createdAt}: ${formatDateToString(
-                student?.createdAt.getDate().toLocaleString() || ""
+                student?.createdAt.toUTCString() || ""
               )}`}
               color="primary"
             />
 
             <Chip
               label={`${updatedAt}: ${formatDateToString(
-                student?.updatedAt.getDate().toLocaleString() || ""
+                student?.updatedAt.toUTCString() || ""
               )}`}
               color="secondary"
             />
@@ -121,10 +121,7 @@ const MuiStudentDetails = ({
         <CardActions sx={{ justifyContent: "center", gap: 1, mt: 2 }}>
           <EditStudentButton id={studentId} />
 
-          <TranslatedDeleteStudentButton
-            studentId={studentId}
-            numberOfThesiss={numOfThesis}
-          />
+          <TranslatedDeleteStudentButton studentId={studentId} />
         </CardActions>
       </Grid>
     </Container>

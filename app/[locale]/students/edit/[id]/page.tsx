@@ -24,6 +24,10 @@ const EditStudentPage = async ({ params }: Props) => {
     email: await useTranslateAsync("students.components.studentsForm.email"),
     update: await useTranslateAsync("students.components.studentsForm.update"),
     create: await useTranslateAsync("students.components.studentsForm.create"),
+    gender: await useTranslateAsync("students.components.studentsForm.gender"),
+    semester: await useTranslateAsync(
+      "students.components.studentsForm.semester"
+    ),
 
     firstnameMinValidationMessage: await useTranslateAsync(
       "students.validationSchema.firstnameValidationMessage.min"

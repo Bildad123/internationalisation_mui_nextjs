@@ -10,6 +10,8 @@ const TranslatedStudentForm = () => {
     email: useTranslate("students.components.studentsForm.email"),
     update: useTranslate("students.components.studentsForm.update"),
     create: useTranslate("students.components.studentsForm.create"),
+    gender: useTranslate("students.components.studentsForm.gender"),
+    semester: useTranslate("students.components.studentsForm.semester"),
     firstnameMinValidationMessage: useTranslate(
       "students.validationSchema.firstnameValidationMessage.min"
     ),

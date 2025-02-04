@@ -1,5 +1,5 @@
 import prisma from "@/prisma/client";
-import { Student } from "@prisma/client";
+
 import { notFound } from "next/navigation";
 import MuiStudentDetails from "../../components/MuiStudentDetails";
 import { Box } from "@mui/material";
