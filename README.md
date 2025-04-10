@@ -2,8 +2,6 @@
 
 This project is a **Next.js** React application that visualizes student data, including gender distribution, across various semesters. The app provides various charts (e.g., Pie charts, Line charts, and Scatter charts) to display data in an insightful and interactive way.
 
-
-
 ## Tech Stack
 
 - **Next.js** - React framework for building static and dynamic websites.
@@ -29,8 +27,14 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/Bildad123/internationalisation_mui_nextjs.git
 
+   ```
 
+2. **Prisma Migration durchführen**
 
+```bash
+npx prisma migrate dev --name initial_migration
+
+```
 
 ## Running in Development Mode
 
@@ -44,5 +48,6 @@ In development mode, Next.js will automatically reload changes when you save fil
 
   ```bash
   npm run dev
+  ```
 
 This will start your application at http://localhost:3000 by default. The development server enables hot reloading, so any changes you make to the code will automatically reflect in the browser without needing a manual refresh.

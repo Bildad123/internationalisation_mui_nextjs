@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 import { getInitials } from "./utils";
 import LocaleSwitcher from "./LocaleSwitcher";
-import { Box, Breadcrumbs, Skeleton } from "@mui/material";
+import { Box, Breadcrumbs, Button, Skeleton } from "@mui/material";
 
 import {
   AppBar,
@@ -66,6 +66,22 @@ const NavBar = ({ translations }: { translations: Translations }) => {
   const colorMode = useColorMode();
   const router = useRouter();
   const { status, data: session } = useSession();
+
+  if (status === "unauthenticated") {
+    return (
+      <Box
+        width={"100vw"}
+        display={"flex"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        mt={3}
+      >
+        <Link href="/api/auth/signin">
+          <Button variant="contained"> {action}</Button>
+        </Link>
+      </Box>
+    );
+  }
 
   return (
     <nav className="w-full bg-gray-100 shadow sticky top-0 z-50">
@@ -213,17 +229,7 @@ const NavBar = ({ translations }: { translations: Translations }) => {
         <Toolbar />
       </ThemeProvider>
 
-      <div>
-        {status === "loading" ? (
-          <Skeleton width="9rem" />
-        ) : status === "unauthenticated" ? (
-          <Link className="nav-link" href="/api/auth/signin">
-            {action}
-          </Link>
-        ) : (
-          <></>
-        )}
-      </div>
+      <Box>{status === "loading" ? <Skeleton width="9rem" /> : <></>}</Box>
     </nav>
   );
 };
